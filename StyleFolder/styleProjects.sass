@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron')
+
+body
+  font-family: sans-serif
+  margin: 0
+  padding: 0
+  background-size: 100%
+  background-image: -moz-linear-gradient(0deg, #0f0f0f 0%, #0f0f0f 99px, #000000 100px)
+  background-image: -webkit-linear-gradient(0deg, #0f0f0f 0%, #0f0f0f 99px, #000000 100px)
+  background-image: linear-gradient(90deg, #002223 0%, #002223 94px, #001b1c 95px)
+  background-size: 100px 100px
+
+.timeline
+  text-align: center
+  height: 100vh
+
+
+  .timelineTitle
+    padding-top: 5rem
+    font-size: 7em
+    color: #ffffff
+    font-weight: normal
+    text-transform: uppercase
+    font-family: 'Orbitron', sans-serif
+
+
+
+/* Timeline - Years */
+.timelines-years
+  position: absolute
+  top: 90vh
+  margin: 0
+  white-space: nowrap
+  border-top: 1px solid #282828
+  list-style: none
+  /* Fix display: inline-block spacing issue */
+  font-size: 0
+
+  li
+    position: relative
+    top: -1vh
+    display: inline-block
+    width: 9vw
+    color: #868686
+    font-size: 1rem
+    line-height: 1rem
+
+
+/* Timeline - Events */
+.timeline-events
+  position: absolute
+  top: 40vh
+  padding: 0
+  list-style: none
+  white-space: nowrap
+  /* Fix display: inline-block spacing issue */
+  font-size: 0
+
+  .timeline-event-years-1,
+  .timeline-event-years-2,
+  .timeline-event-years-3,
+  .timeline-event-years-4
+    &:hover h2, &:hover h3, &:hover h4
+      font-size: 1.3rem
+      cursor: pointer
+
+  h2, h3, h4
+    margin: 0 0 1px 0
+    font-weight: normal
+    font-size: 1rem
+
+
+  h2
+    color: #777
+    text-transform: uppercase
+
+
+  h4
+    color: #fff
+    font-style: italic
+
+
+  li
+    position: absolute
+
+
+    &:before
+      position: absolute
+      left: 0
+      top: 30vh
+      height: 3vh
+      border-radius: 2vh
+      opacity: 0.8
+      content: ""
+
+  .level2
+    top: -3vh
+
+  .level3
+    top: -6vh
+
+  .level4
+    top: -9vh
+
+/* Timeline - Events - Colours */
+/* Grey/Green */
+.timeline-events li:nth-child(1):before
+  background: #c2e34e
+
+
+.timeline-events li:nth-child(1) h3
+  color: #c2e34e
+
+
+/* Orange */
+.timeline-events li:nth-child(2):before
+  background: #ff9704
+
+
+.timeline-events li:nth-child(2) h3
+  color: #ff9704
+
+
+/* Blue */
+.timeline-events li:nth-child(3):before
+  background: #56c2f3
+
+
+.timeline-events li:nth-child(3) h3
+  color: #56c2f3
+
+
+/* Red */
+.timeline-events li:nth-child(4):before
+  background: #dd3d01
+
+
+.timeline-events li:nth-child(4) h3
+  color: #dd3d01
+
+
+/* Aqua/Grey */
+.timeline-events li:nth-child(5):before
+  background: #4a8b8f
+
+
+.timeline-events li:nth-child(5) h3
+  color: #4a8b8f
+
+
+/* Timeline - Events - Grid */
+
+/* X years */
+.timeline-event-years-1,
+.timeline-event-years-1:before
+  width: 30vw
+
+/* X years */
+.timeline-event-years-2,
+.timeline-event-years-2:before
+  width: 30vw
+
+
+/* X years */
+.timeline-event-years-3,
+.timeline-event-years-3:before
+  width: 10vw
+
+
+/* X years */
+.timeline-event-years-4,
+.timeline-event-years-4:before
+  width: 20vw
+
+
+/* X years */
+.timeline-event-years-5,
+.timeline-event-years-5:before
+  width: 10vw
+
+
+/* X years */
+.timeline-event-years-6,
+.timeline-event-years-6:before
+  width: 20vw
+
+//descriptions
+.description
+    height: 50vh
+    width: 100%
+    background: #008793
+    padding: 2em 0
+    text-align: center
+    display: incline-block
+
+    div
+        height: 100%
+        width: 100%
+        font-size: 5rem
+        color: #fff

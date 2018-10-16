@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Slabo+27px');
+@import url('https://fonts.googleapis.com/css?family=Orbitron');
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text');
+
+body {
+    font: 15px/1.5 Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+/*global*/
+.container {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+section {
+    padding-top: 4em;
+    padding-bottom: 4em;
+}
+
+.title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3em;
+    color: #111111;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*header*/
+header {
+    background: #ffffff;
+    padding-top: 1em;
+    min-height: 2;
+    border-bottom: #6fe200 3px solid;
+    position: fixed;
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+    z-index: 10;
+}
+
+header ul {
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+    color: #000000;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+header li {
+    display: inline-block;
+    margin: 0 2em;
+    text-align: center;
+    position: relative;
+}
+
+/*text after hover*/
+header li:hover a {
+    /*color: #6fe200;*/
+
+    background: red;
+    background: -webkit-linear-gradient(left, orange , green, blue);
+    background: -o-linear-gradient(right, orange , green, blue);
+    background: -moz-linear-gradient(right, orange , green, blue);
+    background: linear-gradient(to right, orange , green, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+/*the design of the underline*/
+header li::before {
+    /*background-color: #6fe200;*/
+
+    background: red; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, orange , green, blue); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, orange , green, blue); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right, orange , green, blue); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, orange , green, blue); /* Standard syntax (must be last) */
+
+    top: 100%;
+    transition: 0.5s all;
+    width: 100%;
+    height: 10%;
+    opacity: 0;
+    position: absolute;
+    content: "";
+}
+
+/*underscore after hover*/
+header li:hover::before {
+    opacity: 1;
+}
+
+header .handle{
+    background: purple;
+    width: 1em;
+    height: 1em;
+    border-radius: 25%;
+    display: incline-block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+    animation: shake 4s ease-in-out 0s infinite alternate;
+}
+
+@keyframes shake {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+header .handle:hover {
+    cursor: pointer;
+}
+
+header #navbar.trigger  {
+    display: block
+}
+
+header #navbar.animate {
+    animation: changeOpacity 0.3s ease-in-out forwards;
+}
+
+@keyframes changeOpacity {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+header #navbar {
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    display: none;
+    opacity: 0;
+}
+
+/*Title*/
+.mainTitle {
+    background: url("Pictures/cables.png");
+    background-position: center;
+    min-height: 300px;
+    padding-top: 12em;
+}
+
+#name {
+    color: #6fe200;
+}
+
+.mainTitle #titleLine {
+    font-size: 5em;
+
+    color: #ffffff;
+    font-family: 'Orbitron', sans-serif;
+    text-align: center;
+}
+
+/*about*/
+.about {
+    text-align: center;
+    color: #5c6566;
+    background-color: #cee5e8;
+    box-shadow: 0em 1em 1em #7b9599 inset;
+}
+
+
+/*bio*/
+.bio {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #5c6566;
+}
+
+.bio .container {
+    display: inline-block;
+}
+
+.bio .grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 30em;
+    justify-items: center;
+}
+
+.bio .grid2 {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 15em);
+}
+
+.bio .c {
+    grid-column: 2 / 3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.bio .box {
+    border: 2px dodgerblue solid;
+}
+
+.bio .box div{
+    display: inline-block;
+    width: 12em;
+    height: 12em;
+    border: 2px dodgerblue solid;
+    border-radius: 50%;
+    margin-top: 1.5em;
+}
+
+/*projects*/
+.projects {
+    text-align: center;
+    color: #5c6566;
+    background-color: #cee5e8;
+    box-shadow: 0em 1em 1em #7b9599 inset;
+    z-index: 1;
+}
+
+.projects .pic {
+    float:left;
+    width: 100%;
+    text-align: center;
+}
+
+.projects .img-container {
+    width: 28vw;
+    height: 28vw;
+    max-width: 34em;
+    max-height: 34em;
+    padding: 1.5vw;
+    display: inline-block;
+    margin-right: auto;
+    margin-left: auto;
+    position: relative;
+}
+
+.projects .img-container:hover img {
+    animation: makeDarker 0.5s ease-in-out forwards;
+}
+
+.projects .img-container:hover div {
+    animation: changeOpacity 0.5s ease-in-out forwards;
+}
+
+@keyframes makeDarker {
+    0% {filter: brightness(100%);}
+    100% {filter: brightness(30%);}
+}
+
+.projects img {
+    height: 100%;
+}
+
+.projects .img-container div {
+    position: absolute;
+    /*width: 50em;
+    height: 50em;*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: #ffffff;
+}
+
+.projects #italics {
+    margin: 0;
+    padding: 0;
+    font-style: italic;
+    font-family: 'Crimson Text', serif;
+    font-size: .9em;
+}
+
+.projects #text {
+    font-weight: bold;
+    font-size: 1.75em;
+    margin: 0;
+    margin-bottom: 0.5em;
+    padding: 0;
+}
+
+.projects #projectLink {
+    margin: 0;
+    padding: 0.5em 1em;
+    border-style: solid;
+    border-width: medium;
+    color: #ffffff;
+    border-color: #ffffff;
+    text-decoration: none;
+}
+
+.projects #projectLink:hover {
+    animation: link 0.3s ease-in-out forwards;
+}
+
+@keyframes link {
+    0% {
+        background: none;
+        color: #ffffff;
+
+    }
+    100% {
+        background: #ffffff;
+        color: #000000;
+    }
+}
+
+/*family*/
+.family {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #5c6566;
+    margin-top: 2em;
+}
+
+
+/*footer*/
+footer {
+    padding: 2em;
+    margin-top: 2em;
+    color: #9e006e;
+    background: #6fe200;
+    text-align: center;
+}

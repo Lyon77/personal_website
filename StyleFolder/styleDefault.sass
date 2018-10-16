@@ -1,0 +1,137 @@
+/* This is the global file for which many features are defined*/
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script')
+@import url('https://fonts.googleapis.com/css?family=Yellowtail')
+
+body
+    font: 15px/1.5 Arial, Helvetica, sans-serif
+    padding: 0
+    margin: 0
+    background-color: #f4f4f4
+
+/*global*/
+.container
+    width: 100%
+    margin: auto
+    overflow: hidden
+
+.title
+    font-family: 'Playfair Display', serif
+    font-size: 3vw
+    color: #222222
+
+.title2
+    font-family: 'Playfair Display', serif
+    font-size: 3vw
+    color: #ffffff
+
+ul
+    margin: 0
+    padding: 0
+
+.highlight
+    color: #6fe200
+
+//header
+header
+    background: none
+    padding: 2em 0
+    position: fixed
+    width: 100%
+    z-index: 10
+    transition: all 1s
+    min-height: 5em
+
+    .image
+        position: absolute
+        float: left
+        margin: 0 3em
+        padding-right: 0.5em
+        padding-left: 0.3em
+        text-align: center
+        font-size: 2em
+        color: #ffffff
+        font-size: 3em
+        font-family: 'Kaushan Script', cursive
+        text-decoration: none
+        border: 2px solid rgba(255, 255, 255, 1)
+        border-radius: 5px
+
+        span
+            color: #ff3535
+
+    .topnav a
+        float: right
+        display: block
+        text-align: center
+        text-decoration: none
+        margin: 1em 0em
+        margin-right: 2em
+        color: #ffffff
+        text-transform: uppercase
+        font-size: 1em
+        font-weight: bold
+        padding: 0.5em
+        border: 2px solid rgba(0, 0, 0, 0)
+        border-radius: 5px
+        transition:  all 0.5s
+
+
+        &:hover
+            //color: #0042ad
+            border: 2px solid rgba(255, 255, 255, 1)
+            border-radius: 5px
+            transition: all 0.5s
+
+    .icon
+        display: none
+        margin: 1.6em 0em
+        margin-right: 2em
+        color: #ffffff
+
+.backgroundTransparent
+    background: rgba(0,100,80, 0.8)
+    transition: all 0.5s
+    padding-top: 1em
+    padding-bottom: 1em
+
+//float none for list location when the size of window falls below certain level
+@media screen and (max-width: 1050px)
+    header
+        background: rgba(0,100,80, 0.8)
+        transition: all 0.5s
+        padding-top: 1em
+        padding-bottom: 1em
+
+    header .image
+        margin: 0 1em
+
+    header .topnav a
+        display: none
+
+    header .icon
+        float: right
+        display: block
+
+@media screen and (max-width: 1050px)
+    .topnav.responsive
+        position: relative
+
+    .icon
+        position: absolute
+        right: 1.5em
+        top: 1.1em
+
+
+    .topnav.responsive a
+        float: none
+        display: block
+        width: 40%
+        margin: 0.5em auto
+
+
+// footer
+footer
+    padding: 2em
+    color: #ffffff
+    background: rgb(0,39,47)
+    text-align: center
