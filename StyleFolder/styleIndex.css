@@ -63,30 +63,31 @@ body, html {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 30em;
+  grid-template-rows: 22em;
   justify-items: center;
 }
 .bio .container .grid .grid2 {
   width: 80%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 15em);
-}
-.bio .container .grid .grid2 .box {
-  border: 2px dodgerblue solid;
+  grid-template-rows: 18em 5em;
 }
 .bio .container .grid .grid2 .box div {
   display: inline-block;
-  width: 12em;
-  height: 12em;
-  border: 2px dodgerblue solid;
+  width: 15em;
+  height: 15em;
   border-radius: 50%;
-  margin-top: 1.5em;
+  background-image: url("../Pictures/icon.jpg");
+  background-position: center;
+}
+.bio .container .grid .grid2 .b {
+  font-style: italic;
 }
 .bio .container .grid .grid2 .c {
   grid-column: 2/3;
   grid-row-start: 1;
   grid-row-end: 3;
+  text-align: left;
 }
 
 /*projects*/
@@ -105,17 +106,20 @@ body, html {
   height: 28vw;
   max-width: 34em;
   max-height: 34em;
+  min-width: 20em;
+  min-height: 20em;
   padding: 1.5vw;
   display: inline-block;
   margin-right: auto;
   margin-left: auto;
   position: relative;
+  transition: all 0.3s;
 }
 .projects .pic .img-container:hover img {
-  animation: makeDarker 0.5s ease-in-out forwards;
+  filter: brightness(30%);
 }
 .projects .pic .img-container:hover div {
-  animation: changeOpacity 0.5s ease-in-out forwards;
+  opacity: 1;
 }
 .projects .pic .img-container img {
   height: 100%;
@@ -128,6 +132,7 @@ body, html {
   transform: translate(-50%, -50%);
   opacity: 0;
   color: #ffffff;
+  transition: all 0.3s;
 }
 .projects .pic .img-container div #italics {
   margin: 0;
@@ -151,37 +156,13 @@ body, html {
   color: #ffffff;
   border-color: #ffffff;
   text-decoration: none;
+  transition: all 0.5s;
 }
 .projects .pic .img-container div #projectLink:hover {
-  animation: link 0.3s ease-in-out forwards;
+  background: #ffffff;
+  color: #000000;
 }
 
-@keyframes makeDarker {
-  0% {
-    filter: brightness(100%);
-  }
-  100% {
-    filter: brightness(30%);
-  }
-}
-@keyframes link {
-  0% {
-    background: none;
-    color: #ffffff;
-  }
-  100% {
-    background: #ffffff;
-    color: #000000;
-  }
-}
-@keyframes changeOpacity {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 /*family*/
 .family {
   text-align: center;

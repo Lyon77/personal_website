@@ -13,34 +13,38 @@ body
 .timeline
   text-align: center
   height: 100vh
+  position: relative
 
 
   .timelineTitle
-    padding-top: 5rem
-    font-size: 7em
+    top: 18vh
+    left: 49.5vw
+    transform: translate(-50%, -50%)
+    font-size: 6rem
     color: #ffffff
     font-weight: normal
     text-transform: uppercase
     font-family: 'Orbitron', sans-serif
-
+    position: absolute
 
 
 /* Timeline - Years */
+.timeline-events
+  white-space: nowrap
+
 .timelines-years
   position: absolute
   top: 90vh
   margin: 0
-  white-space: nowrap
-  border-top: 1px solid #282828
   list-style: none
-  /* Fix display: inline-block spacing issue */
   font-size: 0
+  padding-bottom: 5.5vh
+  white-space: nowrap
 
   li
     position: relative
-    top: -1vh
     display: inline-block
-    width: 9vw
+    width: 10rem
     color: #868686
     font-size: 1rem
     line-height: 1rem
@@ -49,26 +53,32 @@ body
 /* Timeline - Events */
 .timeline-events
   position: absolute
-  top: 40vh
+  top: 45vh
+  left: 5rem
   padding: 0
   list-style: none
-  white-space: nowrap
-  /* Fix display: inline-block spacing issue */
   font-size: 0
+  white-space: nowrap
 
-  .timeline-event-years-1,
-  .timeline-event-years-2,
-  .timeline-event-years-3,
-  .timeline-event-years-4
-    &:hover h2, &:hover h3, &:hover h4
-      font-size: 1.3rem
+  li
+    &:hover
       cursor: pointer
 
-  h2, h3, h4
-    margin: 0 0 1px 0
-    font-weight: normal
-    font-size: 1rem
+    div
+      position: absolute
+      left: 50%
+      transform: translate(-50%, -50%)
 
+      &:hover h2, &:hover h3, &:hover h4
+        font-size: 1rem
+
+    .lower
+      top: 13vh
+
+  h2, h3, h4
+    margin: 0
+    font-weight: normal
+    font-size: 0.75rem
 
   h2
     color: #777
@@ -87,11 +97,29 @@ body
     &:before
       position: absolute
       left: 0
-      top: 30vh
+      top: 35vh
       height: 3vh
       border-radius: 2vh
       opacity: 0.8
       content: ""
+
+  .timeline-event-years-2
+    left: 40rem
+
+  .timeline-event-years-3
+    left: 75rem
+
+  .timeline-event-years-4
+    left: 90rem
+
+  .timeline-event-years-6
+    left: 35rem
+
+  .timeline-event-years-7
+    left: 70rem
+
+  .timeline-event-years-8
+    left: 75rem
 
   .level2
     top: -3vh
@@ -147,54 +175,77 @@ body
 .timeline-events li:nth-child(5) h3
   color: #4a8b8f
 
+/* Redish Pink */
+.timeline-events li:nth-child(6):before
+  background: #a3004c
+
+
+.timeline-events li:nth-child(6) h3
+  color: #a3004c
+
+/* Blue */
+.timeline-events li:nth-child(7):before
+  background: #00397f
+
+
+.timeline-events li:nth-child(7) h3
+  color: #00397f
+
+/* Blue */
+.timeline-events li:nth-child(8):before
+  background: #ffffff
+
+
+.timeline-events li:nth-child(8) h3
+  color: #ffffff
+
 
 /* Timeline - Events - Grid */
-
-/* X years */
 .timeline-event-years-1,
 .timeline-event-years-1:before
-  width: 30vw
+  width: 40rem
 
-/* X years */
 .timeline-event-years-2,
 .timeline-event-years-2:before
-  width: 30vw
+  width: 35rem
 
 
-/* X years */
 .timeline-event-years-3,
 .timeline-event-years-3:before
-  width: 10vw
+  width: 25rem
 
 
-/* X years */
 .timeline-event-years-4,
 .timeline-event-years-4:before
-  width: 20vw
+  width: 10rem
 
 
-/* X years */
 .timeline-event-years-5,
 .timeline-event-years-5:before
-  width: 10vw
+  width: 100rem
 
 
-/* X years */
 .timeline-event-years-6,
 .timeline-event-years-6:before
-  width: 20vw
+  width: 5rem
 
-//descriptions
+.timeline-event-years-7,
+.timeline-event-years-7:before
+  width: 5rem
+
+.timeline-event-years-8,
+.timeline-event-years-8:before
+  width: 25rem
+
+
+//description
 .description
-    height: 50vh
-    width: 100%
-    background: #008793
-    padding: 2em 0
-    text-align: center
-    display: incline-block
+  position: absolute
+  left: 25%
+  width: 100%
 
-    div
-        height: 100%
-        width: 100%
-        font-size: 5rem
-        color: #fff
+// //footer
+footer
+  position: absolute
+  width: 96.85%
+  top: 30rem

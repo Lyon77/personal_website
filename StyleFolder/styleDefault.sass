@@ -1,6 +1,8 @@
 /* This is the global file for which many features are defined*/
 @import url('https://fonts.googleapis.com/css?family=Kaushan+Script')
 @import url('https://fonts.googleapis.com/css?family=Yellowtail')
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
 
 body
     font: 15px/1.5 Arial, Helvetica, sans-serif
@@ -23,6 +25,11 @@ body
     font-family: 'Playfair Display', serif
     font-size: 3vw
     color: #ffffff
+
+//set min font-size
+@media screen and (max-width: 1050px)
+    .title, .title2
+        font-size: 3rem
 
 ul
     margin: 0
@@ -77,7 +84,6 @@ header
 
 
         &:hover
-            //color: #0042ad
             border: 2px solid rgba(255, 255, 255, 1)
             border-radius: 5px
             transition: all 0.5s
@@ -91,16 +97,16 @@ header
 .backgroundTransparent
     background: rgba(0,100,80, 0.8)
     transition: all 0.5s
-    padding-top: 1em
-    padding-bottom: 1em
+    padding-top: 1.5em
+    padding-bottom: 1.5em
 
 //float none for list location when the size of window falls below certain level
 @media screen and (max-width: 1050px)
     header
         background: rgba(0,100,80, 0.8)
         transition: all 0.5s
-        padding-top: 1em
-        padding-bottom: 1em
+        padding-top: 1.5em
+        padding-bottom: 1.5em
 
     header .image
         margin: 0 1em
@@ -119,15 +125,37 @@ header
     .icon
         position: absolute
         right: 1.5em
-        top: 1.1em
+        top: 1.5em
 
 
     .topnav.responsive a
         float: none
         display: block
-        width: 40%
-        margin: 0.5em auto
+        width: 30%
+        margin: 0 auto
 
+
+//descriptions
+.description
+    height: 30rem
+    width: 100%
+    background: #008793
+    padding: 2em 0
+    text-align: center
+    display: block
+
+    #home
+        font-size: 5vw
+        color: #fff
+        font-family: 'Fjalla One', sans-serif
+
+    #body
+        font-size: 2rem
+        color: #fff
+        display: grid
+        grid-template-columns: 1fr 1fr
+        grid-template-rows: 20rem
+        font-family: 'Open Sans', sans-serif
 
 // footer
 footer
